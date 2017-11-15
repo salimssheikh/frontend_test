@@ -1,0 +1,126 @@
+<div class="test02">
+	<div class="ngdialog ngdialog-theme-default col-xs-12 col-sm-8 col-md-6 col-lg-6">
+
+		<div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" role="alert" id="transaction_alert" aria-labelledby="transaction_message">{{alert.msg}}</div>
+		<span id="transaction_message">Transaction message after clicking send button</span>	
+	    <form class="future-banking">
+			
+			<section class="container-fluid header">
+		    	<div class="row">
+		    		<div class="col-xs-12 col-sm-12 col-md-6">
+		        		<strong class="fa fa-credit-card fa-2x" tabindex="0"></strong>
+		        		<h1 class="title" tabindex="0">Send Transfer</h1>
+		        	</div>
+		        	<div class="col-xs-12 col-sm-12 col-md-6">
+		        		<div class="btn-group" role="group">
+			        		<button class="btn btn-default">
+			        			<img class="profile-img" alt="" aria-labelledby="logged_in_user"></span>
+			        			<span id="user-name">John Smith</span>
+								<span style="display:none" id="logged_in_user">Profile picture of logged in user</span>
+			        		</button>
+			        		<button class="btn btn-default">
+			        			Sign out
+								<strong class="fa fa-sign-out fa-lg"></strong>
+			        		</button>
+		        		</div>
+		        	</div>
+		        </div>
+		        <div class="row">
+		        	<div class="col-xs-12">
+		        		<hr/>
+		        	</div>
+		        </div>
+	        </section>
+
+	        <section class="container-fluid" id="account-info">
+				<div class="col-xs-12">
+			        <div class="row">
+			        	<div class="col-xs-12">
+			
+			        		<h2 tabindex="0">From</h2>
+			        		
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6" tabindex="0">Account Name:</div>
+			        			<div class="col-xs-6" tabindex="0">Checking</div>
+			        		</div>
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6" tabindex="0">Account Number:</div>
+			        			<div class="col-xs-6" tabindex="0">123456789</div>
+			        		</div>
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6" tabindex="0">Current Balance:</div>
+			        			<div class="col-xs-6" tabindex="0">{{5000 | currency }}</div>
+			        		</div>
+
+			        		<hr/>
+
+			        	</div>
+			        </div>
+		        </div>
+	        </section>
+
+	        <section class="container-fluid" id="transfer-details">
+				<div class="col-xs-12">
+			        <div class="row">
+			        	<div class="col-xs-12">
+
+			        		<h2 tabindex="0">Transfer details</h2>
+			        		
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6" tabindex="0">
+			        				<label id="transfer-amount" for="transfer-amount-textbox">Amount to transfer:</label>
+			        			</div>
+			        			<div class="col-xs-6">
+				        			<input class="form-control" type="text" value="{{300 | currency}}" id="transfer-amount-textbox" required aria-required="true">
+			        			</div>
+			        		</div>
+			        		<div class="row bg-gray">
+			        			<div class="col-xs-6" tabindex="0">
+			        				<label id="transfer-frequency" for="transfer-frequency-option">Frequency:</label>
+			        			</div>
+			        			<div class="col-xs-6">
+			        				<select class="form-control" id="transfer-frequency-option">
+									  <option>Every day</option>
+									  <option>Weekly</option>
+									  <option>Bi-weekly</option>
+									  <option>Monthly</option>
+									</select>
+			        			</div>
+			        		</div>
+
+			        		<hr/>
+
+			        	</div>
+			        </div>
+		        </div>
+	        </section>
+
+	        <section class="container-fluid" id="send-to-recipient">
+				<div class="col-xs-12">
+			        <div class="row">
+			        	<div class="col-xs-12">
+			        		<h2 tabindex="0">Send to</h2>
+			        		
+			        		<div class="row ">
+			        			<div class="col-xs-8">
+			        				<img class="profile-img" alt="" aria-labelledby="recipient_user" tabindex="0">
+			        				<h3 id="recipient" tabindex="0">Jane Smith</h3>
+									<span style="display:none" id="recipient_user">Profile picture of recipient user</span>
+			        			</div>
+			        			<div class="col-xs-4">
+				        			<a href="" class="change-user-link">Change recipient</a>
+			        			</div>
+			        		</div>
+
+			        		<hr/>
+
+							<button type="button" class="btn btn-primary btn-send" ng-click="addAlert()">Send {{300 | currency}}</button>
+
+			        	</div>
+			        </div>
+		        </div>
+	        </section>
+
+	    </form>
+	</div>
+</div>

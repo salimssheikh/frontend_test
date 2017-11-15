@@ -1,0 +1,24 @@
+  [
+        {
+            "en":
+        [
+            {"text":  "Open a chequing account" },
+            { "text": "Open a savings account" },
+            { "text": "Open a U.S. Dollar account" },
+            { "text": "Review my everyday banking needs adsadsad aasdasdsad adasdsad asdasdsad adasdsa adssadsad adssadsad" },
+            { "text": "Switch to TD" },
+            { "text": "Apply for Overdraft Protection" }
+        ],
+        "fr":
+        [
+            {"text": "Ouvrir un compte-chèques" },
+            { "text": "Ouvrir un compte d'épargne" },
+            { "text": "Ouvrir un compte en dollars américains" },
+            { "text": "Revoir mes besoins bancaires quotidiens" },
+            { "text": "Passer à TD" },
+            { "text": "Demande de protection de découvert" }
+        ]
+
+    }
+]
+

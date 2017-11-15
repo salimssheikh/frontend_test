@@ -1,0 +1,21 @@
+  <div class="container test01">
+     <select name="locale" ng-model="locale" ng-change="setLocale()">
+                <option value="en">En</option>
+                <option value="fr">Fr</option>
+    </select>
+     <header class="centered text-center">
+        <h1>Book an Appointment</h1>
+        <h5>Our Investing Topics</h5>
+        <h4>Pick a topic,then we'll find a time and place</h4>  
+    </header>
+    <section class="row centered text-center" >
+      
+         <div class="col-sm-6 col-md-6 col-xs-12" ng-repeat="button in button_model" ng-show="(button_model.length) > 1"><p><button type="button" class="equalHeight">{{button.text}}</button></p></div>
+
+        <div class="col-sm-3 col-md-3 col-xs-12 only-button" ng-repeat="button in button_model" ng-show="(button_model.length) == 1 && $first"><p><button type="button">{{button.text}}</button></p></div>
+                    
+    </section>
+    <footer class="centered text-center">
+            <p><span><</span>&nbsp;&nbsp;Return to previous screen</p>
+    </footer>
+</div>
